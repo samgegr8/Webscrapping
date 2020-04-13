@@ -16,3 +16,10 @@ json_response = response.json()
 print_the_response(json_response)
 
 print(f"Email URL :: {json_response['emails_url']}")
+
+# Handling Headers
+
+headers = response.headers
+print_the_response(headers)
+
+print(f"X-GitHub-Request-Id :: {headers['X-GitHub-Request-Id']}")

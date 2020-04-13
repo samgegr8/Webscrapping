@@ -6,7 +6,7 @@ for url in ["https://api.github.com", "https://api.github.com/invalid"]:
         response = requests.get(url)
         response.raise_for_status()
     except HTTPError as httperror:
-        print(f"HTTP Error Occured:{httperror}")
+        print(f"HTTP Error Occured:{httperror}")  # Catch HTTP Errors
     except Exception as err:
         print(f"Other Errors:{err}")
     else:

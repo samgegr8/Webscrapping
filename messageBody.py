@@ -32,5 +32,9 @@ response_data_json = requests.post(
 
 json_response_json = response_data_json.json()
 
+
 print(f"JSON Response JSON :: {json_response_json}")
 print(f' Content Header JSON:: {json_response_json["headers"]["Content-Type"]}')
+
+
+print(f" Path :: {response_data_json.request.headers}")

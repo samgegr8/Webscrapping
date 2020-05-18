@@ -22,7 +22,7 @@ for job_elem in job_elemens:
     if None in (title_elem, company_elem, location_elem):
         continue
     print(f"Item :: {count} \n\n")
-    # Text command is used to get the value of the element
+    # Text command is used to get the value of the element gone
     print(f"Title : { title_elem.text.strip()}\n")
     print(f"Company : {company_elem.text.strip()}\n")
     print(f"Location : {location_elem.text.strip()}\n")

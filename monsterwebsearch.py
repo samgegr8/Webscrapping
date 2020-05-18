@@ -27,3 +27,9 @@ for job_elem in job_elemens:
     print(f"Company : {company_elem.text.strip()}\n")
     print(f"TLocation : {location_elem.text.strip()}\n")
     count = count + 1
+
+# Modifying the Script to do an exact search
+python_jobs = results.find_all("h2", string=lambda text: "python" in text.lower())
+# print(f"Python Details :: {python_jobs}")
+for p_jobs in python_jobs:
+    print(f"Python Details :: {p_jobs.find('a')['href']}")

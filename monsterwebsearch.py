@@ -1,7 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 
-URL = "https://www.monster.com/jobs/search/?q=Software-Developer&where=Australia"
+location = input("Please enter the job search Location ::")
+
+URL = "https://www.monster.com/jobs/search/?q=Software-Developer&where=" + location
+
 
 page = requests.get(URL)
 
@@ -31,5 +34,9 @@ for job_elem in job_elemens:
 # Modifying the Script to do an exact search
 python_jobs = results.find_all("h2", string=lambda text: "python" in text.lower())
 # print(f"Python Details :: {python_jobs}")
+count = 0
 for p_jobs in python_jobs:
     print(f"Python Details :: {p_jobs.find('a')['href']}")
+    count = count + 1
+if count == 0:
+    print(f"No Python Job in {location}")

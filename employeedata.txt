@@ -1,0 +1,4 @@
+Name,Department,Birthday Month
+Samrat,IT,April
+Aaheli,Finance,March
+Amrita,Econometrics,December
